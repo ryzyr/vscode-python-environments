@@ -81,6 +81,7 @@ import { registerCondaFeatures } from './managers/conda/main';
 import { registerPipenvFeatures } from './managers/pipenv/main';
 import { registerPoetryFeatures } from './managers/poetry/main';
 import { registerPyenvFeatures } from './managers/pyenv/main';
+import { registerWslFeatures } from './managers/wsl/main';
 
 export async function activate(context: ExtensionContext): Promise<PythonEnvironmentApi | undefined> {
     const useEnvironmentsExtension = getConfiguration('python').get<boolean>('useEnvironmentsExtension', true);
@@ -434,6 +435,7 @@ export async function activate(context: ExtensionContext): Promise<PythonEnviron
             registerPyenvFeatures(nativeFinder, context.subscriptions, projectManager),
             registerPipenvFeatures(nativeFinder, context.subscriptions, projectManager),
             registerPoetryFeatures(nativeFinder, context.subscriptions, outputChannel, projectManager),
+            registerWslFeatures(context, context.subscriptions, outputChannel, api),
             shellStartupVarsMgr.initialize(),
         ]);
 
