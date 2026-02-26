@@ -73,7 +73,7 @@ export async function promptForCopilotInstructions(): Promise<boolean | undefine
 export async function quickCreateNewVenv(envManagers: EnvironmentManagers, destFolder: string) {
     // get the environment manager for venv, should always exist
     const envManager: InternalEnvironmentManager | undefined = envManagers.managers.find(
-        (m) => m.id === 'ms-python.python:venv',
+        (m) => m.id === 'creative-dev.python:venv',
     );
     const destinationUri = Uri.parse(destFolder);
     if (envManager?.supportsQuickCreate) {

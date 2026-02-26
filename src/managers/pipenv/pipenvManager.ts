@@ -52,7 +52,7 @@ export class PipenvManager implements EnvironmentManager {
     constructor(public readonly nativeFinder: NativePythonFinder, public readonly api: PythonEnvironmentApi) {
         this.name = 'pipenv';
         this.displayName = 'Pipenv';
-        this.preferredPackageManagerId = 'ms-python.python:pip';
+        this.preferredPackageManagerId = 'creative-dev.python:pip';
         this.tooltip = new MarkdownString(PipenvStrings.pipenvManager, true);
     }
 

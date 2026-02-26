@@ -28,7 +28,7 @@ export async function collectEnvironmentInfo(
         info.push(`Extension Version: ${extensionVersion}`);
 
         // Python extension version
-        const pythonExtension = extensions.getExtension('ms-python.python');
+        const pythonExtension = extensions.getExtension('creative-dev.python');
         const pythonVersion = pythonExtension?.packageJSON?.version || 'not installed';
         info.push(`Python Extension Version: ${pythonVersion}`);
 
@@ -280,7 +280,7 @@ export async function resolveDefaultInterpreter(
 
                 let findEnvManager = envManagers.managers.find((m) => m.id === resolvedEnv?.envId.managerId);
                 if (!findEnvManager) {
-                    findEnvManager = envManagers.managers.find((m) => m.id === 'ms-python.python:system');
+                    findEnvManager = envManagers.managers.find((m) => m.id === 'creative-dev.python:system');
                 }
                 const randomString = Math.random().toString(36).substring(2, 15);
                 if (resolvedEnv) {

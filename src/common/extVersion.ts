@@ -15,6 +15,6 @@ export function ensureCorrectVersion() {
     if (major >= 2025 || (major === 2024 && minor >= 23)) {
         return;
     }
-    traceError('Incompatible Python extension. Please update `ms-python.python` to version 2024.23 or later.');
-    throw new Error('Incompatible Python extension. Please update `ms-python.python` to version 2024.23 or later.');
+    traceError('Incompatible Python extension. Please update `creative-dev.python` to version 2024.23 or later.');
+    throw new Error('Incompatible Python extension. Please update `creative-dev.python` to version 2024.23 or later.');
 }

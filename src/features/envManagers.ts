@@ -433,7 +433,7 @@ export class PythonEnvironmentManagers implements EnvironmentManagers {
             const urisToSet: Uri[] = [];
             for (const uri of scope) {
                 const current = await this.getEnvironment(uri);
-                if (!current || current.envId.managerId === 'ms-python.python:system') {
+                if (!current || current.envId.managerId === 'creative-dev.python:system') {
                     // If the current environment is not set or is the system environment, set the new environment.
                     urisToSet.push(uri);
                 }

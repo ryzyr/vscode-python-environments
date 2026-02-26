@@ -84,7 +84,7 @@ export class VenvManager implements EnvironmentManager {
         // https://github.com/microsoft/vscode-python-environments/issues/167
         this.description = undefined;
         this.tooltip = new MarkdownString(VenvManagerStrings.venvManagerDescription, true);
-        this.preferredPackageManagerId = 'ms-python.python:pip';
+        this.preferredPackageManagerId = 'creative-dev.python:pip';
         this.iconPath = new ThemeIcon('python');
     }
 

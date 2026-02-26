@@ -348,7 +348,7 @@ export interface EnvironmentManager {
      * `<publisher-id>.<extension-id>:<package-manager-name>`
      *
      * @example
-     * 'ms-python.python:pip'
+     * 'creative-dev.python:pip'
      */
     readonly preferredPackageManagerId: string;
 

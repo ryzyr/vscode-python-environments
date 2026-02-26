@@ -36,10 +36,10 @@ export async function registerPoetryFeatures(
             );
         } else {
             traceInfo('Poetry not found, turning off poetry features.');
-            await notifyMissingManagerIfDefault('ms-python.python:poetry', projectManager, api);
+            await notifyMissingManagerIfDefault('creative-dev.python:poetry', projectManager, api);
         }
     } catch (ex) {
         traceInfo('Poetry not found, turning off poetry features.', ex);
-        await notifyMissingManagerIfDefault('ms-python.python:poetry', projectManager, api);
+        await notifyMissingManagerIfDefault('creative-dev.python:poetry', projectManager, api);
     }
 }

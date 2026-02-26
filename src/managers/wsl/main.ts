@@ -41,7 +41,7 @@ export async function registerWslFeatures(
         const wslPseudoManager = {
             name: 'wsl',
             displayName: 'WSL',
-            preferredPackageManagerId: 'ms-python.python:pip',
+            preferredPackageManagerId: 'creative-dev.python:pip',
             description: 'Windows Subsystem for Linux Python environments',
         };
 

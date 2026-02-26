@@ -47,7 +47,7 @@ export class PoetryManager implements EnvironmentManager, Disposable {
     constructor(private readonly nativeFinder: NativePythonFinder, private readonly api: PythonEnvironmentApi) {
         this.name = 'poetry';
         this.displayName = 'Poetry';
-        this.preferredPackageManagerId = 'ms-python.python:poetry';
+        this.preferredPackageManagerId = 'creative-dev.python:poetry';
         this.tooltip = new MarkdownString(PoetryStrings.poetryManager, true);
     }
 

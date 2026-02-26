@@ -24,10 +24,10 @@ export async function registerPipenvFeatures(
             disposables.push(mgr, api.registerEnvironmentManager(mgr));
         } else {
             traceInfo('Pipenv not found, turning off pipenv features.');
-            await notifyMissingManagerIfDefault('ms-python.python:pipenv', projectManager, api);
+            await notifyMissingManagerIfDefault('creative-dev.python:pipenv', projectManager, api);
         }
     } catch (ex) {
         traceInfo('Pipenv not found, turning off pipenv features.', ex);
-        await notifyMissingManagerIfDefault('ms-python.python:pipenv', projectManager, api);
+        await notifyMissingManagerIfDefault('creative-dev.python:pipenv', projectManager, api);
     }
 }
