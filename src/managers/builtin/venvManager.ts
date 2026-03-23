@@ -84,7 +84,7 @@ export class VenvManager implements EnvironmentManager {
         // https://github.com/microsoft/vscode-python-environments/issues/167
         this.description = undefined;
         this.tooltip = new MarkdownString(VenvManagerStrings.venvManagerDescription, true);
-        this.preferredPackageManagerId = 'creative-dev.python:pip';
+        this.preferredPackageManagerId = 'scider.python:pip';
         this.iconPath = new ThemeIcon('python');
     }
 
@@ -198,8 +198,7 @@ export class VenvManager implements EnvironmentManager {
                     } catch (err) {
                         // If stat fails, fallback to original envPath
                         traceWarn(
-                            `Failed to stat environment path: ${envPath}. Error: ${
-                                err instanceof Error ? err.message : String(err)
+                            `Failed to stat environment path: ${envPath}. Error: ${err instanceof Error ? err.message : String(err)
                             }, continuing to attempt to create .gitignore.`,
                         );
                     }
@@ -207,8 +206,7 @@ export class VenvManager implements EnvironmentManager {
                     await fs.writeFile(gitignorePath, '*\n', { flag: 'w' });
                 } catch (err) {
                     traceError(
-                        `Failed to create .gitignore in venv: ${
-                            err instanceof Error ? err.message : String(err)
+                        `Failed to create .gitignore in venv: ${err instanceof Error ? err.message : String(err)
                         }, continuing.`,
                     );
                 }
@@ -225,8 +223,7 @@ export class VenvManager implements EnvironmentManager {
                         ),
                     );
                     traceError(
-                        `Failed to reveal venv parent folder in VS Code Explorer: ${
-                            error instanceof Error ? error.message : String(error)
+                        `Failed to reveal venv parent folder in VS Code Explorer: ${error instanceof Error ? error.message : String(error)
                         }`,
                     );
                 }

@@ -1,12 +1,12 @@
 import * as path from 'path';
 
 export const ENVS_EXTENSION_ID = 'ms-python.vscode-python-envs';
-export const PYTHON_EXTENSION_ID = 'creative-dev.python';
+export const PYTHON_EXTENSION_ID = 'scider.python';
 export const JUPYTER_EXTENSION_ID = 'ms-toolsai.jupyter';
 export const EXTENSION_ROOT_DIR = path.dirname(__dirname);
 
-export const DEFAULT_PACKAGE_MANAGER_ID = 'creative-dev.python:pip';
-export const DEFAULT_ENV_MANAGER_ID = 'creative-dev.python:venv';
+export const DEFAULT_PACKAGE_MANAGER_ID = 'scider.python:pip';
+export const DEFAULT_ENV_MANAGER_ID = 'scider.python:venv';
 
 export const KNOWN_FILES = [
     'requirements.txt',

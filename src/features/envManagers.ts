@@ -67,7 +67,7 @@ export class PythonEnvironmentManagers implements EnvironmentManagers {
     public onDidChangeEnvironmentFiltered: Event<DidChangeEnvironmentEventArgs> =
         this._onDidChangeEnvironmentFiltered.event;
 
-    constructor(private readonly pm: PythonProjectManager) {}
+    constructor(private readonly pm: PythonProjectManager) { }
 
     public registerEnvironmentManager(manager: EnvironmentManager): Disposable {
         const managerId = generateId(manager.name);
@@ -273,8 +273,7 @@ export class PythonEnvironmentManagers implements EnvironmentManagers {
         const manager = this.getEnvironmentManager(customScope);
         if (!manager) {
             traceError(
-                `No environment manager found for scope: ${
-                    customScope instanceof Uri ? customScope.fsPath : customScope?.environmentPath?.fsPath
+                `No environment manager found for scope: ${customScope instanceof Uri ? customScope.fsPath : customScope?.environmentPath?.fsPath
                 }`,
             );
 
@@ -316,8 +315,7 @@ export class PythonEnvironmentManagers implements EnvironmentManagers {
             const manager = this.managers.find((m) => m.id === environment.envId.managerId);
             if (!manager) {
                 traceError(
-                    `No environment manager found for [${environment.envId.managerId}]: ${
-                        environment.environmentPath ? environment.environmentPath.fsPath : ''
+                    `No environment manager found for [${environment.envId.managerId}]: ${environment.environmentPath ? environment.environmentPath.fsPath : ''
                     }`,
                 );
                 traceError(this.managers.map((m) => m.id).join(', '));
@@ -433,7 +431,7 @@ export class PythonEnvironmentManagers implements EnvironmentManagers {
             const urisToSet: Uri[] = [];
             for (const uri of scope) {
                 const current = await this.getEnvironment(uri);
-                if (!current || current.envId.managerId === 'creative-dev.python:system') {
+                if (!current || current.envId.managerId === 'scider.python:system') {
                     // If the current environment is not set or is the system environment, set the new environment.
                     urisToSet.push(uri);
                 }

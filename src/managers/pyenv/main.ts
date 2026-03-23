@@ -23,10 +23,10 @@ export async function registerPyenvFeatures(
             disposables.push(mgr, api.registerEnvironmentManager(mgr));
         } else {
             traceInfo('Pyenv not found, turning off pyenv features.');
-            await notifyMissingManagerIfDefault('creative-dev.python:pyenv', projectManager, api);
+            await notifyMissingManagerIfDefault('scider.python:pyenv', projectManager, api);
         }
     } catch (ex) {
         traceInfo('Pyenv not found, turning off pyenv features.', ex);
-        await notifyMissingManagerIfDefault('creative-dev.python:pyenv', projectManager, api);
+        await notifyMissingManagerIfDefault('scider.python:pyenv', projectManager, api);
     }
 }

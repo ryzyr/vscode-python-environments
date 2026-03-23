@@ -37,6 +37,6 @@ export async function registerCondaFeatures(
         );
     } catch (ex) {
         traceInfo('Conda not found, turning off conda features.', ex);
-        await notifyMissingManagerIfDefault('creative-dev.python:conda', projectManager, api);
+        await notifyMissingManagerIfDefault('scider.python:conda', projectManager, api);
     }
 }

@@ -23,7 +23,7 @@ export class NewPackageProject implements PythonProjectCreator {
     constructor(
         private readonly envManagers: EnvironmentManagers,
         private readonly projectManager: PythonProjectManager,
-    ) {}
+    ) { }
 
     async create(options?: PythonProjectCreatorOptions): Promise<PythonProject | Uri | undefined> {
         let packageName = options?.name;
@@ -133,7 +133,7 @@ export class NewPackageProject implements PythonProjectCreator {
                 } else {
                     // get venv manager or any manager that supports quick creating environments
                     const venvManager = this.envManagers.managers.find(
-                        (m) => m.id === 'creative-dev.python:venv' || m.supportsQuickCreate,
+                        (m) => m.id === 'scider.python:venv' || m.supportsQuickCreate,
                     );
                     if (venvManager) {
                         createdEnv = await venvManager.create(Uri.file(projectDestinationFolder), {

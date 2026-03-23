@@ -54,7 +54,7 @@ export class SysPythonManager implements EnvironmentManager {
     ) {
         this.name = 'system';
         this.displayName = 'Global';
-        this.preferredPackageManagerId = 'creative-dev.python:pip';
+        this.preferredPackageManagerId = 'scider.python:pip';
         this.description = undefined;
         this.tooltip = new MarkdownString(SysManagerStrings.sysManagerDescription, true);
         this.iconPath = new ThemeIcon('globe');

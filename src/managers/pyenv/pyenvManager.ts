@@ -47,7 +47,7 @@ export class PyEnvManager implements EnvironmentManager, Disposable {
     constructor(private readonly nativeFinder: NativePythonFinder, private readonly api: PythonEnvironmentApi) {
         this.name = 'pyenv';
         this.displayName = 'PyEnv';
-        this.preferredPackageManagerId = 'creative-dev.python:pip';
+        this.preferredPackageManagerId = 'scider.python:pip';
         this.tooltip = new MarkdownString(PyenvStrings.pyenvManager, true);
     }
 

@@ -20,15 +20,15 @@ import {
 export type IconPath =
     | Uri
     | {
-          /**
-           * The icon path for the light theme.
-           */
-          light: Uri;
-          /**
-           * The icon path for the dark theme.
-           */
-          dark: Uri;
-      }
+        /**
+         * The icon path for the light theme.
+         */
+        light: Uri;
+        /**
+         * The icon path for the dark theme.
+         */
+        dark: Uri;
+    }
     | ThemeIcon;
 
 /**
@@ -348,7 +348,7 @@ export interface EnvironmentManager {
      * `<publisher-id>.<extension-id>:<package-manager-name>`
      *
      * @example
-     * 'creative-dev.python:pip'
+     * 'scider.python:pip'
      */
     readonly preferredPackageManagerId: string;
 
@@ -730,45 +730,45 @@ export interface DidChangePythonProjectsEventArgs {
 
 export type PackageManagementOptions =
     | {
-          /**
-           * Upgrade the packages if they are already installed.
-           */
-          upgrade?: boolean;
+        /**
+         * Upgrade the packages if they are already installed.
+         */
+        upgrade?: boolean;
 
-          /**
-           * Show option to skip package installation or uninstallation.
-           */
-          showSkipOption?: boolean;
-          /**
-           * The list of packages to install.
-           */
-          install: string[];
+        /**
+         * Show option to skip package installation or uninstallation.
+         */
+        showSkipOption?: boolean;
+        /**
+         * The list of packages to install.
+         */
+        install: string[];
 
-          /**
-           * The list of packages to uninstall.
-           */
-          uninstall?: string[];
-      }
+        /**
+         * The list of packages to uninstall.
+         */
+        uninstall?: string[];
+    }
     | {
-          /**
-           * Upgrade the packages if they are already installed.
-           */
-          upgrade?: boolean;
+        /**
+         * Upgrade the packages if they are already installed.
+         */
+        upgrade?: boolean;
 
-          /**
-           * Show option to skip package installation or uninstallation.
-           */
-          showSkipOption?: boolean;
-          /**
-           * The list of packages to install.
-           */
-          install?: string[];
+        /**
+         * Show option to skip package installation or uninstallation.
+         */
+        showSkipOption?: boolean;
+        /**
+         * The list of packages to install.
+         */
+        install?: string[];
 
-          /**
-           * The list of packages to uninstall.
-           */
-          uninstall: string[];
-      };
+        /**
+         * The list of packages to uninstall.
+         */
+        uninstall: string[];
+    };
 
 /**
  * Options for creating a Python environment.
@@ -923,10 +923,10 @@ export interface PythonProjectEnvironmentApi {
 
 export interface PythonEnvironmentManagerApi
     extends PythonEnvironmentManagerRegistrationApi,
-        PythonEnvironmentItemApi,
-        PythonEnvironmentManagementApi,
-        PythonEnvironmentsApi,
-        PythonProjectEnvironmentApi {}
+    PythonEnvironmentItemApi,
+    PythonEnvironmentManagementApi,
+    PythonEnvironmentsApi,
+    PythonProjectEnvironmentApi { }
 
 export interface PythonPackageManagerRegistrationApi {
     /**
@@ -988,9 +988,9 @@ export interface PythonPackageManagementApi {
 
 export interface PythonPackageManagerApi
     extends PythonPackageManagerRegistrationApi,
-        PythonPackageGetterApi,
-        PythonPackageManagementApi,
-        PythonPackageItemApi {}
+    PythonPackageGetterApi,
+    PythonPackageManagementApi,
+    PythonPackageItemApi { }
 
 export interface PythonProjectCreationApi {
     /**
@@ -1046,7 +1046,7 @@ export interface PythonProjectModifyApi {
  *
  * By default all `vscode.workspace.workspaceFolders` are treated as projects.
  */
-export interface PythonProjectApi extends PythonProjectCreationApi, PythonProjectGetterApi, PythonProjectModifyApi {}
+export interface PythonProjectApi extends PythonProjectCreationApi, PythonProjectGetterApi, PythonProjectModifyApi { }
 
 export interface PythonTerminalCreateOptions extends TerminalOptions {
     /**
@@ -1207,9 +1207,9 @@ export interface PythonBackgroundRunApi {
 
 export interface PythonExecutionApi
     extends PythonTerminalCreateApi,
-        PythonTerminalRunApi,
-        PythonTaskRunApi,
-        PythonBackgroundRunApi {}
+    PythonTerminalRunApi,
+    PythonTaskRunApi,
+    PythonBackgroundRunApi { }
 
 /**
  * Event arguments for when the monitored `.env` files or any other sources change.
@@ -1259,7 +1259,7 @@ export interface PythonEnvironmentVariablesApi {
  */
 export interface PythonEnvironmentApi
     extends PythonEnvironmentManagerApi,
-        PythonPackageManagerApi,
-        PythonProjectApi,
-        PythonExecutionApi,
-        PythonEnvironmentVariablesApi {}
+    PythonPackageManagerApi,
+    PythonProjectApi,
+    PythonExecutionApi,
+    PythonEnvironmentVariablesApi { }
